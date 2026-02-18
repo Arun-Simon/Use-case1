@@ -1,0 +1,21 @@
+Automated Log Rotation Manager
+
+Problem Statement: Application logs grow indefinitely
+
+Objective: To build a shell-based log rotation tool that:
+		Compresses old logs
+		Deletes logs older than X days
+		Maintains rotation history
+		Logs all operations
+
+Solution:
+
+Created a new empty log file using touch command.
+Initially, defined the log directory and archive directory where compressed logs go.
+Using find to get the logs older than 1 day.
+Compressed logs using gzip and moves them to the archive folder.
+Using find to get the logs older than 7 days, and deleted them.
+Maintains all the rotation logs.
+
+
+Note: Since the log and the set of code was created today, that is no logs are older than 1 day, output will be empty.
